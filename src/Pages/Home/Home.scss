@@ -19,6 +19,10 @@
         width: 100%;
         padding: 0.5rem;
         border-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
       }
 
       button {
@@ -27,6 +31,11 @@
         margin-top: 0.5rem;
         padding: 0.5rem 2rem;
         cursor: pointer;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
