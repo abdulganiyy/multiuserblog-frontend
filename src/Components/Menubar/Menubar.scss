@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader&display=swap");
+
+$primary-menu-font: "Newsreader", serif;
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  font: $primary-menu-font;
+  padding: 0 64px;
+  height: 65px;
+  border-bottom: 1px solid black;
+
+  .logo {
+    padding: 27px 0;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .nav-list-desktop {
+    display: none;
+  }
+
+  .user-icon {
+    padding: 17px 0;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  .nav-icon {
+    padding: 27px 0;
+    cursor: pointer;
+
+    i {
+      font-size: 30px;
+    }
+  }
+}
+
+.side-drawer {
+  position: fixed;
+  display: none;
+  top: 65px;
+  left: 0;
+  transition: display ease-in-out 1s;
+}
+
+.show-side-drawer {
+  display: block;
+
+  ul {
+    list-style: none;
+
+    a {
+      display: block;
+      color: inherit;
+    }
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .toolbar {
+    height: 134px;
+
+    .logo {
+      padding: 52px 0;
+    }
+
+    .user-icon {
+      padding: 52px 0;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .nav-list-desktop {
+      display: block;
+
+      div {
+        display: inline-block;
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          padding: 52px 0 40px;
+          margin-left: 32px;
+          color: inherit;
+        }
+
+        .active {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+
+    .nav-icon {
+      display: none;
+    }
+  }
+}

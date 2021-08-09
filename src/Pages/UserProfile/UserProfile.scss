@@ -1,0 +1,51 @@
+.user-profile {
+  padding: 1rem;
+
+  .form-container {
+    width: 100%;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .form-control {
+      width: 100%;
+      margin-bottom: 1rem;
+
+      input {
+        width: 100%;
+        background-color: #ccc;
+        border: none;
+        border-radius: 10px;
+        padding: 1rem;
+        border-bottom: 5px solid #808080;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .bio {
+      input {
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .user-profile {
+    padding: 1rem 25rem;
+  }
+}

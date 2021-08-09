@@ -1,0 +1,36 @@
+.new-post {
+  padding: 30px;
+
+  .form-container {
+    width: 80%;
+    margin: auto;
+
+    .form-control {
+      width: 100%;
+      margin-bottom: 30px;
+
+      input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+
+      textarea {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        padding: 1rem 2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
