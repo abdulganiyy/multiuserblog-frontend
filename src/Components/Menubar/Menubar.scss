@@ -43,6 +43,19 @@ $primary-menu-font: "Newsreader", serif;
   }
 }
 
+.button {
+  background-color: black;
+  color: white;
+  margin-top: 0.5rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .side-drawer {
   position: fixed;
   display: none;

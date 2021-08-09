@@ -74,6 +74,9 @@ const Home = () => {
             <button type="submit" onClick={onSubmit}>
               Login
             </button>
+            <span className="goto-signup">
+              <Link to="/signup">Sign Up</Link>
+            </span>
           </div>
         </form>
       </div>

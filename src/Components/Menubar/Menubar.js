@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./Menubar.scss";
 import avatar from "../../images/avatar.png";
+import { useHistory } from "react-router-dom";
 
 const Menubar = () => {
   const [showSidebar, setShowSidebar] = React.useState(false);
   const [activePage, setActivePage] = React.useState("home");
+
+  let history = useHistory();
 
   const { user, status } = useSelector((state) => state.userReducer);
   console.log(user, status);
@@ -20,6 +23,16 @@ const Menubar = () => {
     const path = pathname === "/" ? "home" : pathname.substr(1);
     setActivePage(path);
   }, []);
+
+  const logoutButton = (
+    <>
+      {status === "loggedin" ? (
+        <button className="button" onClick={() => history.push("/logout")}>
+          Log Out
+        </button>
+      ) : null}
+    </>
+  );
 
   const userIcon = (
     <>
@@ -57,6 +70,7 @@ const Menubar = () => {
           </div>
         </div>
         <div className="user-icon">
+          {logoutButton}
           <Link to="/user-profile">{userIcon}</Link>
         </div>
         <div className="nav-icon" onClick={sidebarHandler}>
@@ -73,6 +87,7 @@ const Menubar = () => {
           <li>
             <Link to="new-post">New Post</Link>
           </li>
+          <li>{logoutButton}</li>
         </ul>
       </div>
     </>

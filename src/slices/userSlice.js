@@ -27,6 +27,15 @@ export const login = createAsyncThunk("user/login", async (data) => {
   return response.data;
 });
 
+export const register = createAsyncThunk("user/register", async (data) => {
+  const response = await axios.post(
+    "https://multiuserblog-backend.herokuapp.com/users/register",
+    data
+  );
+
+  return response.data;
+});
+
 export const updateProfile = createAsyncThunk(
   "user/updateProfile",
   async (data) => {
@@ -51,7 +60,7 @@ const userSlice = createSlice({
   initialState: initialState,
   reducers: {
     logout: (state, action) => {
-      localStorage.deleteItem("token");
+      localStorage.removeItem("token");
       state.status = "loggedout";
       state.user = null;
     },
@@ -59,6 +68,13 @@ const userSlice = createSlice({
 
   extraReducers: {
     [login.fulfilled]: (state, action) => {
+      const { token, user } = action.payload;
+
+      localStorage.setItem("token", token);
+      state.user = user;
+      state.status = "loggedin";
+    },
+    [register.fulfilled]: (state, action) => {
       const { token, user } = action.payload;
 
       localStorage.setItem("token", token);

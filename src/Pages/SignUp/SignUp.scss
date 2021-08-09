@@ -1,4 +1,4 @@
-.home {
+.signup {
   padding: 64px 0;
 
   .form-container {
@@ -7,11 +7,6 @@
 
     .form-control {
       width: 100%;
-
-      .goto-signup {
-        display: inline-block;
-        margin-left: 50%;
-      }
 
       label {
         display: block;
@@ -44,36 +39,10 @@
       }
     }
   }
-
-  .articles-wrapper {
-    padding: 36px 20px;
-
-    h2 {
-      text-align: center;
-    }
-
-    .articles {
-      width: 100%;
-      margin: 0 auto;
-      margin-top: 29px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 42px;
-
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-  }
-
-  .hide-form-container {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1224px) {
-  .home {
+  .signup {
     padding: 76px 0;
 
     .form-container {
@@ -82,11 +51,6 @@
 
       .form-control {
         width: 100%;
-
-        .goto-signup {
-          display: inline-block;
-          margin-left: 30%;
-        }
 
         label {
           display: block;
@@ -97,25 +61,6 @@
           display: block;
           width: 50%;
         }
-      }
-    }
-
-    .articles-wrapper {
-      padding: 64px 0;
-
-      h2 {
-        text-align: center;
-      }
-
-      .articles {
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 39px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto;
-        column-gap: 28px;
-        row-gap: 64px;
       }
     }
   }
