@@ -20,7 +20,7 @@ if (token) {
 
 export const login = createAsyncThunk("user/login", async (data) => {
   const response = await axios.post(
-    "https://multiuserblog-backend.herokuapp.com/login",
+    "https://multiuserblog-backend.herokuapp.com/users/login",
     data
   );
 
