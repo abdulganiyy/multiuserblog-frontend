@@ -7,16 +7,16 @@ const initialState = {
   user: null,
   error: null,
 };
-// const token = localStorage.getItem("token");
+const token = localStorage.getItem("token");
 
-// if (token) {
-//   const decoded = jwt.decode(token);
+if (token) {
+  const decoded = jwt.decode(token);
 
-//   if (decoded) {
-//     initialState.status = "loggedin";
-//     initialState.user = decoded;
-//   }
-// }
+  if (decoded) {
+    initialState.status = "loggedin";
+    initialState.user = decoded;
+  }
+}
 
 export const login = createAsyncThunk("user/login", async (data) => {
   const response = await axios.post("http://localhost:8000/users/login", data);
