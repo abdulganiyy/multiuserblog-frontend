@@ -1,5 +1,5 @@
 .home {
-  padding: 52px 0;
+  padding: 64px 0;
 
   .form-container {
     width: 100%;
@@ -45,7 +45,16 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 42px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
+  }
+
+  .hide-form-container {
+    display: none;
   }
 }
 
@@ -88,16 +97,7 @@
         grid-auto-rows: auto;
         column-gap: 28px;
         row-gap: 64px;
-
-        a {
-          text-decoration: none;
-          color: black;
-        }
       }
     }
-  }
-
-  .hide-form-container {
-    display: none;
   }
 }

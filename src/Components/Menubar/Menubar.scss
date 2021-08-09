@@ -5,7 +5,7 @@ $primary-menu-font: "Newsreader", serif;
 .toolbar {
   display: flex;
   justify-content: space-between;
-  font: $primary-menu-font;
+  font-family: $primary-menu-font;
   padding: 0 64px;
   height: 65px;
   border-bottom: 1px solid black;
@@ -48,11 +48,14 @@ $primary-menu-font: "Newsreader", serif;
   display: none;
   top: 65px;
   left: 0;
+  width: 100vw;
   transition: display ease-in-out 1s;
 }
 
 .show-side-drawer {
   display: block;
+  background-color: #ccc;
+  font-family: $primary-menu-font;
 
   ul {
     list-style: none;
@@ -60,6 +63,8 @@ $primary-menu-font: "Newsreader", serif;
     a {
       display: block;
       color: inherit;
+      text-decoration: none;
+      margin: 1rem;
     }
   }
 }
@@ -104,5 +109,9 @@ $primary-menu-font: "Newsreader", serif;
     .nav-icon {
       display: none;
     }
+  }
+
+  .show-side-drawer {
+    display: none;
   }
 }

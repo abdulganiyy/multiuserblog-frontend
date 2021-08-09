@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 
 import Menubar from "./Components/Menubar/Menubar";
 import Home from "./Pages/Home/Home";
