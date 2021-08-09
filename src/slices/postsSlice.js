@@ -2,13 +2,17 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
-  const response = await axios.get("http://localhost:8000/posts");
+  const response = await axios.get(
+    "https://multiuserblog-backend.herokuapp.com/posts"
+  );
 
   return response.data;
 });
 
 export const fetchPost = createAsyncThunk("posts/fetchPost", async (id) => {
-  const response = await axios.get(`http://localhost:8000/posts/${id}`);
+  const response = await axios.get(
+    `https://multiuserblog-backend.herokuapp.com/posts/${id}`
+  );
 
   return response.data;
 });
@@ -21,7 +25,7 @@ export const createPost = createAsyncThunk("posts/createPost", async (data) => {
     },
   };
   const response = await axios.post(
-    "http://localhost:8000/posts",
+    "https://multiuserblog-backend.herokuapp.com/posts",
     data,
     config
   );

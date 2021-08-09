@@ -19,7 +19,10 @@ if (token) {
 }
 
 export const login = createAsyncThunk("user/login", async (data) => {
-  const response = await axios.post("http://localhost:8000/users/login", data);
+  const response = await axios.post(
+    "https://multiuserblog-backend.herokuapp.com/login",
+    data
+  );
 
   return response.data;
 });
@@ -34,7 +37,7 @@ export const updateProfile = createAsyncThunk(
       },
     };
     const response = await axios.patch(
-      "http://localhost:8000/users/update",
+      "https://multiuserblog-backend.herokuapp.com/users/update",
       data,
       config
     );
